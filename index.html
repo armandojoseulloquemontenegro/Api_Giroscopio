@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Giroscopio Joystick</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #joystick {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: gray;
+        }
+
+        #stick {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        /* Añadimos algunas reglas para hacer el joystick más estilizado */
+        #joystick::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-sizing: border-box;
+        }
+
+        #joystick::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 60%;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="joystick">
+        <div id="stick"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
